@@ -10,6 +10,6 @@
 
 @interface NameViewController : UIViewController
 
-@property(nonatomic, retain) IBOutlet UILabel* myTextField;
+@property(nonatomic, retain) IBOutlet UITextField* myTextField;
 
 @end

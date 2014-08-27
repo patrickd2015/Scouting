@@ -1,18 +1,18 @@
 //
-//  NameViewController.m
+//  DataViewController.m
 //  ScoutingApp
 //
-//  Created by Patrick Dong on 8/23/14.
+//  Created by Patrick Dong on 8/25/14.
 //  Copyright (c) 2014 Patrick Dong. All rights reserved.
 //
 
-#import "NameViewController.h"
+#import "DataViewController.h"
 
-@interface NameViewController ()
+@interface DataViewController ()
 
 @end
 
-@implementation NameViewController
+@implementation DataViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,23 +27,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"Name Entry";
-    [[self.tabBarController.viewControllers objectAtIndex:1] setTitle:@"Data Entry"];
-
+    self.title = @"Main";
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [self.myTextField resignFirstResponder];
-    [[NSUserDefaults standardUserDefaults] setObject:self.myTextField.text forKey:@"name"];
-    self.tabBarController.selectedIndex = 1;
-    return YES;
 }
 
 /*

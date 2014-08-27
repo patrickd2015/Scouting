@@ -66,12 +66,20 @@
     [[NSUserDefaults standardUserDefaults] setObject:self.label4.text forKey:@"trusserRating"];
     [[NSUserDefaults standardUserDefaults] setObject:self.label5.text forKey:@"humanRating"];
     [[NSUserDefaults standardUserDefaults] setObject:self.label6.text forKey:@"otherRating"];
+    [[NSUserDefaults standardUserDefaults] setObject:self.myTextField.text forKey:@"otherName"];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.myTextField resignFirstResponder];
+    [[NSUserDefaults standardUserDefaults] setObject:self.myTextField.text forKey:@"otherName"];
+    return YES;
 }
 
 /*

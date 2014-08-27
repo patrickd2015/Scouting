@@ -1,18 +1,18 @@
 //
-//  NameViewController.m
+//  DefensiveViewController.m
 //  ScoutingApp
 //
-//  Created by Patrick Dong on 8/23/14.
+//  Created by Patrick Dong on 8/25/14.
 //  Copyright (c) 2014 Patrick Dong. All rights reserved.
 //
 
-#import "NameViewController.h"
+#import "DefensiveViewController.h"
 
-@interface NameViewController ()
+@interface DefensiveViewController ()
 
 @end
 
-@implementation NameViewController
+@implementation DefensiveViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,23 +27,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"Name Entry";
-    [[self.tabBarController.viewControllers objectAtIndex:1] setTitle:@"Data Entry"];
-
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [self.myTextField resignFirstResponder];
-    [[NSUserDefaults standardUserDefaults] setObject:self.myTextField.text forKey:@"name"];
-    self.tabBarController.selectedIndex = 1;
-    return YES;
 }
 
 /*

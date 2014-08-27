@@ -24,4 +24,6 @@
 @property(nonatomic, retain) IBOutlet UILabel* label5;
 @property(nonatomic, retain) IBOutlet UILabel* label6;
 
+@property(nonatomic, retain) IBOutlet UITextField* myTextField;
+
 @end

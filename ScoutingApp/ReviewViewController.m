@@ -61,6 +61,7 @@
     matchData[@"trusserRating"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"trusserRating"];
     matchData[@"humanRating"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"humanRating"];
     matchData[@"otherRating"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"otherRating"];
+    matchData[@"teamNumber"] = @254;
 
     [matchData saveInBackground];
 }
